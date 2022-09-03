@@ -30,9 +30,6 @@ public class MainActivity extends AppCompatActivity {
             this.finish();
         },DISPLAY_LENGTH);*/
 
-        Intent intent = new Intent(MainActivity.this, MapNav.class);
-        startActivity(intent);
-
     }
 
     @Override
@@ -40,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         super.onStart();
         FirebaseUser user = mAuth.getCurrentUser();
         if (user == null) {
-            startActivity(new Intent(MainActivity.this, MapNav.class));
+            startActivity(new Intent(MainActivity.this, Login.class));
         }
     }
 }
