@@ -28,8 +28,7 @@ public class SignUp extends AppCompatActivity {
         setContentView(R.layout.activity_sign_up);
 
         //type cast
-        btnExit = findViewById(R.id.btnExit);
-        btnSignIn = findViewById(R.id.btnSignIn);
+
         edFullName = findViewById(R.id.edFullName);
         edPassword = findViewById(R.id.edPassword);
         edUsername = findViewById(R.id.edUsername);

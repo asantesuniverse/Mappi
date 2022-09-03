@@ -1,10 +1,11 @@
 package com.example.mappi;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.os.PersistableBundle;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.mapbox.android.core.permissions.PermissionsListener;
 import com.mapbox.android.core.permissions.PermissionsManager;
@@ -13,7 +14,6 @@ import com.mapbox.mapboxsdk.geometry.LatLng;
 import com.mapbox.mapboxsdk.maps.MapView;
 import com.mapbox.mapboxsdk.maps.MapboxMap;
 import com.mapbox.mapboxsdk.maps.OnMapReadyCallback;
-import com.mapbox.mapboxsdk.maps.Style;
 
 import java.util.List;
 
@@ -35,7 +35,7 @@ public class MapNav extends AppCompatActivity implements OnMapReadyCallback, Per
         setContentView(R.layout.activity_map_nav);
 
         mapView = findViewById(R.id.mapView);
-       //mapView.onCreate(savedInstanceState);
+        //mapView.onCreate(savedInstanceState);
         mapView.getMapAsync(this);
 
     }
@@ -70,7 +70,6 @@ public class MapNav extends AppCompatActivity implements OnMapReadyCallback, Per
 //        mapView.onSaveInstanceState(outState);
 //    }
 
-
     @Override
     protected void onPostCreate(Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
@@ -93,7 +92,6 @@ public class MapNav extends AppCompatActivity implements OnMapReadyCallback, Per
     }
 
     @Override
-    public boolean onMapClick(@NonNull LatLng point) {
-        return false;
+    public void onMapClick(@NonNull LatLng point) {}
     }
-}
+

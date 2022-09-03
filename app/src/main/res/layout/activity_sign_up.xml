@@ -28,7 +28,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="76dp"
-            android:fontFamily="@font/pt_serif"
             android:text="Sign Up"
             android:textColor="@color/black"
             android:textSize="24sp"
@@ -43,7 +42,6 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="56dp"
             android:layout_marginTop="32dp"
-            android:fontFamily="@font/open_sans_bold"
             android:text="Already a user?"
             android:textColor="@color/black"
             android:textSize="18dp"
@@ -54,8 +52,7 @@
         <TextView
             android:id="@+id/txtSignUp"
             android:layout_width="94dp"
-            android:layout_height="27dp"
-            android:fontFamily="@font/open_sans_bold"
+            android:layout_height="48dp"
             android:onClick="SignInLink"
             android:text=" Sign In"
             android:textColor="@color/purple_200"
@@ -115,19 +112,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/edUsername" />
-
-        <ImageView
-            android:id="@+id/btnExit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="btnExit"
-            app:layout_constraintBottom_toTopOf="@+id/edFullName"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.991"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.045"
-            app:srcCompat="@drawable/btn_exit" />
 
         <Button
             android:id="@+id/btnSignUp"

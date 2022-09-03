@@ -6,15 +6,21 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 
 public class MainActivity extends AppCompatActivity {
 
+    FirebaseAuth mAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-            //timer variable
+        mAuth = FirebaseAuth.getInstance();
+
+            /*timer variable
             int DISPLAY_LENGTH = 8000;
             new Handler().postDelayed(()->{
 
@@ -22,6 +28,19 @@ public class MainActivity extends AppCompatActivity {
             Intent splashIntent = new Intent(MainActivity.this, MapNav.class);
             startActivity(splashIntent);
             this.finish();
-        },DISPLAY_LENGTH);
+        },DISPLAY_LENGTH);*/
+
+        Intent intent = new Intent(MainActivity.this, MapNav.class);
+        startActivity(intent);
+
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        FirebaseUser user = mAuth.getCurrentUser();
+        if (user == null) {
+            startActivity(new Intent(MainActivity.this, MapNav.class));
+        }
     }
 }

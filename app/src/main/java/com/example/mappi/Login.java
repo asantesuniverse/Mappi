@@ -22,7 +22,6 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         //type cast
-        btnSignInAuth = findViewById(R.id.btnSignInAuth);
         edPassword1 = findViewById(R.id.edPassword1);
         edUsernameEmail = findViewById(R.id.edUsernameEmail);
         txtSignUp = findViewById(R.id.txtSignUp);
